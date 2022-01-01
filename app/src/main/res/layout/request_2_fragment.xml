@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    >
+    <data>
+        <variable
+            name="context"
+            type="com.tarweej.mypost.mainactivity.MainActivity" />
+
+        <!--        <variable-->
+        <!--            name="data"-->
+        <!--            type="com.tarweej.mypost.entities.cities.CitiesModel" />-->
+
+
+        <variable
+            name="listener"
+            type="com.tarweej.mypost.helper.ClickHandler" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/HomeTitles"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:padding="@dimen/dimen_8"
+            android:text="@string/request"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_arrow_back"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
+
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:src="@drawable/bar2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/title_text"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center"
+                    android:text="@string/title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/write_title_here"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:inputType="text"
+                    android:textColorHint="@color/gray"
+                    android:hint="@string/enterTitle"
+                    android:textColor="@color/black"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/title_text" />
+
+
+
+
+
+                <TextView
+                    android:id="@+id/subtitle"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/sub_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/write_title_here" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/subtitle_text"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="@string/enter_sub_title"
+                    android:orientation="horizontal"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
+                    app:boxStrokeColor="@color/purple_700"
+                    app:boxStrokeWidth="2dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitle"/>
+
+
+
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/description"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subtitle_text" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/description_text"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="16dp"
+                    android:textColorHint="@color/gray"
+
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="@string/write_description"
+                    android:minHeight="80dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/description"
+                    tools:ignore="TextContrastCheck" />
+
+
+                <TextView
+                    android:id="@+id/your_budget_title"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/your_budget"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/from"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="0"
+                    android:textColorHint="@color/gray"
+
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="@+id/your_budget_title"
+                    app:layout_constraintStart_toStartOf="@+id/your_budget_title"
+                    app:layout_constraintTop_toBottomOf="@id/your_budget_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView"
+                    style="@style/HomeTitles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/to"
+                    app:layout_constraintBottom_toBottomOf="@+id/from"
+                    app:layout_constraintStart_toEndOf="@+id/from"
+                    app:layout_constraintTop_toBottomOf="@+id/your_budget_title" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/to"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="@string/_0"
+                    android:textColorHint="@color/gray"
+
+                    android:minHeight="48dp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatTextView"
+                    app:layout_constraintTop_toBottomOf="@id/your_budget_title" />
+
+                <TextView
+                    android:id="@+id/number_of_days_title"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/numOfDay"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/from" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/number_of_days_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintEnd_toEndOf="@+id/number_of_days_title"
+                    app:layout_constraintStart_toStartOf="@+id/number_of_days_title"
+                    app:layout_constraintTop_toBottomOf="@+id/number_of_days_title">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/minus"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <EditText
+                        android:id="@+id/editText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="5"
+                        android:textColor="@color/black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/plus"
+                        app:layout_constraintStart_toEndOf="@+id/minus"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/plus"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/search_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/search_button"
+                    android:onClick="@{() -> listener.switchToThirdRequestFragment(context)}"
+                    android:text="@string/next"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/number_of_days_layout"
+                    app:layout_constraintWidth_percent="0.8" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">My Post</string>
+    <string name="main">Home</string>
+    <string name="favourite">Favourite</string>
+    <string name="more">More</string>
+    <string name="offers">Offers</string>
+    <string name="cart">Cart</string>
+    <string name="enjoy">Enjoy \u0020 </string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="myorder">My Order</string>
+    <string name="request">Request</string>
+    <string name="profile"> Profile </string>
+    <string name="interactiveAds">Interactive Ads </string>
+    <string name="topProducts">Top Products</string>
+    <string name="bestFamous">Best Famous</string>
+    <string name="specialFamous">Special Famous</string>
+    <string name="certifiedFamous">Certified Famous</string>
+    <string name="specialCustomer">Special Customer</string>
+    <string name="textView" translatable="false">Text View</string>
+
+    <string name="seeAll">See All</string>
+
+
+    <string name="notification">Notification</string>
+    <string name="select_number">select number of subscribers</string>
+    <string name="category_type">Choose Category Type</string>
+    <string name="ads_type">Add the type Of add you want</string>
+    <string name="suggestedAds">Suggested Ads</string>
+    <string name="next">Next</string>
+    <string name="send">send request</string>
+
+    <string name="title">Title</string>
+    <string name="enterTitle">Enter Title</string>
+    <string name="sub_title"> Subtitle</string>
+    <string name="enter_sub_title">Enter Subtitle</string>
+    <string name="description">Description</string>
+    <string name="write_description">Write a Description here</string>
+    <string name="your_budget">your budget starts from</string>
+    <string name="to">To</string>
+    <string name="numOfDay">Number of days</string>
+    <string name="_0">0</string>
+
+
+</resources>

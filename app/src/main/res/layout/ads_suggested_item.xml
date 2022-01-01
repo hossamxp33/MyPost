@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <data>
+
+    </data>
+
+
+    <TextView
+        android:id="@+id/ArriveText"
+        android:layout_width="wrap_content"
+        android:textColor="@color/purple_700"
+        android:drawableRight="@drawable/add_ic"
+        android:textStyle="bold"
+        android:padding="14dp"
+        android:layout_margin="@dimen/dimen_4"
+        android:alpha="0.6"
+        android:background="@drawable/purpple_light_back_g"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+</layout>

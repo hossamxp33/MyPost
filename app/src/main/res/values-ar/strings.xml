@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">My Post</string>
+    <string name="main">الرئيسية</string>
+    <string name="favourite">المفضلة</string>
+    <string name="more">المزيد</string>
+    <string name="offers">العروض</string>
+    <string name="enjoy"> أستمتع \u0020</string>
+    <string name="cart">العربة</string>
+    <string name="myorder">طلبي</string>
+    <string name="request">طلب</string>
+    <string name="profile">ملف شخصي</string>
+    <string name="interactiveAds">إعلانات تفاعلية</string>
+    <string name="topProducts">أهم المنتجات</string>
+    <string name="seeAll">رؤية الكل </string>
+    <string name="bestFamous">أفضل مشاهير</string>
+    <string name="specialFamous">مشاهير مميزون</string>
+    <string name="certifiedFamous">مشاهير معتمدة</string>
+    <string name="specialCustomer">عملاء مميزون</string>
+    <string name="send">ارسال طلب</string>
+
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">الغاء</string>
+    <string name="notification">الاشعارات</string>
+    <string name="select_number">حدد عدد المشتركين</string>
+    <string name="category_type">أختار نوع الفئة</string>
+    <string name="ads_type">أضف نوع الإضافة الذي تريده</string>
+    <string name="suggestedAds">الإعلانات المقترحة</string>
+    <string name="next">التالي</string>
+    <string name="title">عنوان</string>
+    <string name="enterTitle">أكتب عنوان</string>
+    <string name="sub_title"> عنوان فرعي</string>
+    <string name="enter_sub_title">أكتب عنوان فرعي</string>
+    <string name="description">الوصف </string>
+    <string name="write_description">أكتب الوصف هنا </string>
+    <string name="your_budget">ميزانيتك تبدأ من</string>
+    <string name="to">الي</string>
+    <string name="numOfDay">عدد الايام</string>
+
+</resources>
