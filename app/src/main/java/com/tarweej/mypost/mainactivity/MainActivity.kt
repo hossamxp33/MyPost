@@ -2,13 +2,8 @@ package com.tarweej.mypost.mainactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
-import androidx.fragment.app.FragmentManager
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigation
-import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem
-import com.aurelhubert.ahbottomnavigation.notification.AHNotification
 import com.tarweej.mypost.R
 import com.tarweej.mypost.helper.ClickHandler
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
@@ -22,7 +17,10 @@ import kotlinx.android.synthetic.main.bottom_nav_content.*
 import kotlinx.android.synthetic.main.home_fragment.*
 import java.util.*
 import javax.inject.Inject
-import kotlin.collections.ArrayDeque
+
+
+import com.tarweej.mypost.presentation.request.RequestActivity
+
 
 class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
@@ -41,6 +39,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         AndroidInjection.inject(this)
         supportFragmentManager.fragmentFactory = fragmentFactory
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)
 
 
@@ -48,14 +47,14 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             supportFragmentManager.beginTransaction()
                 .setCustomAnimations(0, 0, 0, 0)
                 .replace(R.id.main_frame, HomeFragment())
-                .addToBackStack(null).commit()
+                .addToBackStack(null)
+                .commit()
             bottom_nav_bar.selectedItemId = R.id.home
 
         }
 
         //      BottomNav().bottomMenu(this)
 
-        integerDeque.push(R.id.home)
 
 
         bottom_nav_bar.setOnNavigationItemSelectedListener {
@@ -73,18 +72,42 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
                 }
                 integerDeque.remove(id)
             }
-
-
-
             integerDeque.push(id)
+            ClickHandler().switchFragment(this, BottomNav().getFragment(this, it.itemId))
+            with(bottom_nav_bar) {
+                when (it.itemId) {
+                    R.id.home -> {
+                        menu.getItem(0).isChecked = true
+                        ClickHandler().switchFragment(this@MainActivity, HomeFragment())
+                    }
+                    R.id.myOrder -> {
+                        menu.getItem(1).isChecked = true
+                        ClickHandler().switchFragment(this@MainActivity, MyOrdersFragment())
+                    }
+                    R.id.main -> {
+                        menu.getItem(2).isChecked = true
 
-            if (it.itemId == 3){
-                ClickHandler().switchToActivity(this)
-            }else {
+                    }
+                    R.id.Request -> {
 
-                ClickHandler().switchFragment(this, BottomNav().getFragment(this, it.itemId))
+                        ClickHandler().switchToActivity(this@MainActivity,RequestActivity())
+                    }
+
+                    R.id.profile -> {
+                        menu.getItem(4).isChecked = true
+                        fragment = ProfileFragment()
+                    }
+                    else ->
+                {
+                    menu.getItem(0).isChecked = true
+                    ClickHandler().switchFragment(this@MainActivity, HomeFragment())
+                }
+                }
+
 
             }
+
+
             true
 
         }
@@ -92,23 +115,17 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
     }
 
-    
-
-
-
-
-
 
     override fun onBackPressed() {
-        super.onBackPressed()
-        integerDeque.pop()
-        if (!integerDeque.isEmpty()) {
-            ClickHandler().switchFragment(this, BottomNav().getFragment(this,integerDeque.peek()!!))
-        } else  {
+        integerDeque.poll()
+        if (!integerDeque.isNullOrEmpty()) {
+            ClickHandler().switchFragment(
+                this,
+                BottomNav().getFragment(this, integerDeque.peek()!!)
+            )
 
+        } else
             finish()
-
-        }
     }
 
     @Inject

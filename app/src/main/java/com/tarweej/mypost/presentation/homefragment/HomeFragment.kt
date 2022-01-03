@@ -7,19 +7,15 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.tarweej.mypost.R
 import com.tarweej.mypost.databinding.HomeFragmentBinding
 import com.tarweej.mypost.helper.BaseApplication
 import com.tarweej.mypost.helper.ClickHandler
 import com.tarweej.mypost.mainactivity.MainActivity
-import dagger.android.AndroidInjection
-import kotlinx.android.synthetic.main.bottom_nav_content.*
 import javax.inject.Inject
 
 
 class HomeFragment @Inject constructor() : Fragment() {
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +38,9 @@ class HomeFragment @Inject constructor() : Fragment() {
             R.layout.home_fragment, container, false
         )
 
+         view.include.context = context as MainActivity
+         view.include.listener = ClickHandler()
+
 
         topProductsRecycleView()
 
@@ -49,12 +48,12 @@ class HomeFragment @Inject constructor() : Fragment() {
     }
 
     fun topProductsRecycleView() {
-      //  tripAdapter = FlightAdapter(requireContext())
+        //  tripAdapter = FlightAdapter(requireContext())
         view.topProductsRecycleView.apply {
-            layoutManager = GridLayoutManager(context,2) // default orientation is vertical
-           // adapter = tripAdapter;
+            layoutManager = GridLayoutManager(context, 2) // default orientation is vertical
+            // adapter = tripAdapter;
             isNestedScrollingEnabled = false
             setHasFixedSize(true)
         }
     }
-    }
+}

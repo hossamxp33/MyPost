@@ -62,4 +62,12 @@
         <item name="boxStrokeColor">@color/gray</item>
         <item name="boxStrokeWidth">2dp</item>
     </style>
+
+    <style name="normalTextStyle">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textColorHint">@color/hint_gray</item>
+
+    </style>
 </resources>

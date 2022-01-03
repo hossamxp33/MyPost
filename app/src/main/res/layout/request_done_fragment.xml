@@ -10,49 +10,22 @@
             name="context"
             type="com.tarweej.mypost.presentation.request.RequestActivity" />
 
+<!--        <variable-->
+<!--            name="data"-->
+<!--            type="com.tarweej.mypost.entities.cities.CitiesModel" />-->
+
+
         <variable
             name="listener"
             type="com.tarweej.mypost.helper.ClickHandler" />
 
-    </data>
 
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:animateLayoutChanges="true">
 
-        <TextView
-            android:id="@+id/title"
-            style="@style/HomeTitles"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:padding="@dimen/dimen_8"
-            android:text="@string/request"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/back_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:src="@drawable/ic_arrow_back"
-            app:layout_constraintBottom_toBottomOf="@+id/title"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/title" />
-
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginTop="12dp"
-            android:background="@color/gray"
-            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -62,7 +35,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view">
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -71,42 +44,41 @@
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/appCompatImageView"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:src="@drawable/bar3"
+                    android:layout_marginTop="32dp"
+                    android:src="@drawable/done_image"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/title_text"
-                    style="@style/blackText"
+                    android:id="@+id/RequestMade"
+                    style="@style/HomeTitles"
+                    android:padding="@dimen/dimen_16"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
                     android:layout_marginTop="32dp"
                     android:gravity="center"
-                    android:text="@string/title"
+                    android:drawableEnd="@drawable/done_icon"
+                    android:text="@string/requestMade"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/appCompatImageView" />
 
-
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/write_title_here"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@drawable/light_gray_back_g"
-                    android:inputType="text"
-                    android:gravity="center_horizontal"
-                    android:textColorHint="@color/gray"
-                    android:hint="@string/write_description"
-                    android:textColor="@color/black"
+                <TextView
+                    android:id="@+id/description"
+                    style="@style/grayText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:gravity="center"
+                    android:text="@string/please_wait"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/title_text" />
+                    app:layout_constraintTop_toBottomOf="@+id/RequestMade" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/search_button"
@@ -114,15 +86,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/search_button"
-                    android:text="@string/send"
+                    android:text="@string/backToHome"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:onClick="@{() -> listener.switchToFinishRequestFragment(context)}"
-
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/description"
                     app:layout_constraintWidth_percent="0.8" />
+
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

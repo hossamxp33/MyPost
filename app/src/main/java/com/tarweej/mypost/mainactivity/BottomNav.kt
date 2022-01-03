@@ -10,7 +10,6 @@ import com.tarweej.mypost.presentation.homefragment.HomeFragment
 import com.tarweej.mypost.presentation.myorders.MyOrdersFragment
 import com.tarweej.mypost.presentation.profile.ProfileFragment
 
-import com.tarweej.mypost.presentation.request.FirstRequestFragment
 import kotlinx.android.synthetic.main.bottom_nav_content.*
 import java.util.*
 
@@ -40,10 +39,7 @@ class BottomNav {
                 menu.getItem(2).isChecked = true
                 fragment = ProfileFragment()
             }
-            R.id.Request -> {
-               menu.getItem(3).isChecked = true
-                fragment = FirstRequestFragment()
-            }
+
 
             R.id.profile -> {
                menu.getItem(4).isChecked = true

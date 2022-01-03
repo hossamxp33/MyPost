@@ -36,10 +36,18 @@
     <string name="enter_sub_title">Enter Subtitle</string>
     <string name="description">Description</string>
     <string name="write_description">Write a Description here</string>
+    <string name="please_wait">Please Wait until the famous accepts your request</string>
+
     <string name="your_budget">your budget starts from</string>
     <string name="to">To</string>
+    <string name="backToHome">Back To Home</string>
+
     <string name="numOfDay">Number of days</string>
+    <string name="requestMade">Request Made\u0020 </string>
     <string name="_0">0</string>
+    <string name="search_famous">Search famous social media</string>
+    <string name="ads_with_famous">Advertising with famous social media</string>
+    <string name="viewProfile">View Profile</string>
 
 
 </resources>

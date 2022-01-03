@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.tarweej.mypost.R
-import com.tarweej.mypost.databinding.Request2FragmentBinding
+import com.tarweej.mypost.databinding.RequestDoneFragmentBinding
 import com.tarweej.mypost.helper.BaseApplication
 import com.tarweej.mypost.helper.ClickHandler
+import com.tarweej.mypost.mainactivity.MainActivity
 import javax.inject.Inject
 
-class SecondRequestFragment @Inject constructor() : Fragment() {
+class FinishRequestFragment @Inject constructor() : Fragment() {
 
 
 
@@ -24,7 +25,7 @@ class SecondRequestFragment @Inject constructor() : Fragment() {
         }
     }
 
-    lateinit var view: Request2FragmentBinding
+    lateinit var view:  RequestDoneFragmentBinding
 
 
     override fun onCreateView(
@@ -33,13 +34,15 @@ class SecondRequestFragment @Inject constructor() : Fragment() {
     ): View {
         view = DataBindingUtil.inflate(
             inflater,
-            R.layout.request_2_fragment, container, false
+            R.layout.request_done_fragment, container, false
         )
 
         view.context = context as RequestActivity
         view.listener = ClickHandler()
 
-
+       view.searchButton.setOnClickListener {
+           ClickHandler().switchToActivity(requireContext(),MainActivity())
+       }
         return view.root
     }
 

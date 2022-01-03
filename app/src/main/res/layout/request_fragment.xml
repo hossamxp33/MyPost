@@ -8,7 +8,7 @@
     <data>
         <variable
             name="context"
-            type="com.tarweej.mypost.mainactivity.MainActivity" />
+            type="com.tarweej.mypost.presentation.request.RequestActivity" />
 
 <!--        <variable-->
 <!--            name="data"-->
@@ -47,7 +47,7 @@
             android:layout_marginStart="16dp"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintBottom_toBottomOf="@+id/title"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/title" />
 
 

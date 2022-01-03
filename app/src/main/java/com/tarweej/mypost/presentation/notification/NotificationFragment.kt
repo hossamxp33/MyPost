@@ -1,4 +1,4 @@
-package com.tarweej.mypost.presentation.request
+package com.tarweej.mypost.presentation.notification
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,13 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.tarweej.mypost.R
-import com.tarweej.mypost.databinding.Request2FragmentBinding
+import com.tarweej.mypost.databinding.NotificationFragmentBinding
+import com.tarweej.mypost.databinding.ProfileFragmentBinding
 import com.tarweej.mypost.helper.BaseApplication
-import com.tarweej.mypost.helper.ClickHandler
 import javax.inject.Inject
 
-class SecondRequestFragment @Inject constructor() : Fragment() {
+
+class NotificationFragment @Inject constructor() : Fragment() {
 
 
 
@@ -24,7 +25,7 @@ class SecondRequestFragment @Inject constructor() : Fragment() {
         }
     }
 
-    lateinit var view: Request2FragmentBinding
+    lateinit var view: NotificationFragmentBinding
 
 
     override fun onCreateView(
@@ -33,16 +34,14 @@ class SecondRequestFragment @Inject constructor() : Fragment() {
     ): View {
         view = DataBindingUtil.inflate(
             inflater,
-            R.layout.request_2_fragment, container, false
+            R.layout.notification_fragment, container, false
         )
 
-        view.context = context as RequestActivity
-        view.listener = ClickHandler()
+
 
 
         return view.root
     }
 
 
-
-}
+    }

@@ -8,7 +8,7 @@
     <data>
         <variable
             name="context"
-            type="com.tarweej.mypost.mainactivity.MainActivity" />
+            type="com.tarweej.mypost.presentation.request.RequestActivity" />
 
         <!--        <variable-->
         <!--            name="data"-->
@@ -45,7 +45,7 @@
             android:layout_marginStart="16dp"
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintBottom_toBottomOf="@+id/title"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toTopOf="@+id/title" />
 
 
@@ -167,7 +167,6 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:textColorHint="@color/gray"
-
                     android:background="@drawable/light_gray_back_g"
                     android:hint="@string/write_description"
                     android:minHeight="80dp"
@@ -299,7 +298,6 @@
                     android:text="@string/next"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

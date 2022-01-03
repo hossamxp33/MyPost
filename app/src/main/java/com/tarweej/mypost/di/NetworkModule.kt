@@ -1,5 +1,6 @@
 package com.tarweej.mypost.di
 
+import android.app.Notification
 import android.content.Context
 import com.tarweej.mypost.ActivityBuildersModule
 import com.tarweej.mypost.datalayer.APIServices
@@ -7,10 +8,13 @@ import com.tarweej.mypost.helper.Constants.Companion.BASE_URL
 import com.tarweej.mypost.helper.FragmentFactoryModule
 import com.tarweej.mypost.helper.ViewModelBuilderModule
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
+import com.tarweej.mypost.presentation.notification.NotificationFragment
 import com.tarweej.mypost.presentation.profile.ProfileFragment
+import com.tarweej.mypost.presentation.request.FinishRequestFragment
 import com.tarweej.mypost.presentation.request.FirstRequestFragment
 import com.tarweej.mypost.presentation.request.SecondRequestFragment
 import com.tarweej.mypost.presentation.request.ThirdRequestFragment
+import com.tarweej.mypost.presentation.searchfragment.SearchFragment
 
 import dagger.BindsInstance
 import dagger.Component
@@ -61,6 +65,9 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(app: FirstRequestFragment)
     fun inject(app: SecondRequestFragment)
     fun inject(app: ThirdRequestFragment)
+    fun inject(app: FinishRequestFragment)
+    fun inject(app: SearchFragment)
+    fun inject(app: NotificationFragment)
 }
 
 
