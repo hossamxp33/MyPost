@@ -6,7 +6,18 @@
 
     >
     <data>
+        <variable
+            name="context"
+            type="com.tarweej.mypost.presentation.request.RequestActivity" />
 
+        <!--        <variable-->
+        <!--            name="data"-->
+        <!--            type="com.tarweej.mypost.entities.cities.CitiesModel" />-->
+
+
+        <variable
+            name="listener"
+            type="com.tarweej.mypost.helper.ClickHandler" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -164,6 +175,8 @@
                 android:text="@string/viewProfile"
                 android:textColor="@color/purple_300"
                 android:textSize="14sp"
+                android:onClick="@{() -> listener.famousProfileFragment(context)}"
+
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

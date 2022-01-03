@@ -36,6 +36,7 @@
         <entry key="..\:/MyPost/app/src/main/res/layout/dropdown_item.xml" value="0.153125" />
         <entry key="..\:/MyPost/app/src/main/res/layout/famous_item_adapter.xml" value="0.2212962962962963" />
         <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_adapter.xml" value="0.25" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_fragment.xml" value="0.2212962962962963" />
         <entry key="..\:/MyPost/app/src/main/res/layout/fragment_my_orders.xml" value="0.2564814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/MyPost/app/src/main/res/layout/main_frame_content.xml" value="0.28425925925925927" />
@@ -46,7 +47,7 @@
         <entry key="..\:/MyPost/app/src/main/res/layout/request_activity.xml" value="0.23333333333333334" />
         <entry key="..\:/MyPost/app/src/main/res/layout/request_done_fragment.xml" value="0.18" />
         <entry key="..\:/MyPost/app/src/main/res/layout/request_fragment.xml" value="0.18" />
-        <entry key="..\:/MyPost/app/src/main/res/layout/search_fragment.xml" value="0.2" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/search_fragment.xml" value="0.25" />
         <entry key="..\:/MyPost/app/src/main/res/layout/special_customer_item_adapter.xml" value="0.287962962962963" />
         <entry key="..\:/MyPost/app/src/main/res/layout/special_famous_item_adapter.xml" value="0.75" />
         <entry key="..\:/MyPost/app/src/main/res/layout/tob_bar.xml" value="0.16197916666666667" />

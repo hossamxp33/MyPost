@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.tarweej.mypost.R
 import com.tarweej.mypost.mainactivity.MainActivity
+import com.tarweej.mypost.presentation.famousprofilefragment.FamousProfileFragment
 import com.tarweej.mypost.presentation.notification.NotificationFragment
 import com.tarweej.mypost.presentation.request.FinishRequestFragment
 import com.tarweej.mypost.presentation.request.RequestActivity
@@ -16,6 +17,12 @@ import kotlinx.android.synthetic.main.bottom_nav_content.*
 
 class ClickHandler {
 
+fun famousProfileFragment (context: Context){
+    val frag = FamousProfileFragment()
+    frag.apply {
+        show((context as MainActivity).supportFragmentManager, FamousProfileFragment.TAG)
+    }
+}
     fun switchToSecondRequestFragment(context: Context) {
         switchToRequestFragment(context as RequestActivity, SecondRequestFragment())
     }
@@ -35,6 +42,8 @@ class ClickHandler {
     fun switchNotificationFragment(context: Context) {
         switchFragment(context, NotificationFragment())
     }
+
+
 
 
     fun switchFragment(context: Context, fragment: Fragment) {
