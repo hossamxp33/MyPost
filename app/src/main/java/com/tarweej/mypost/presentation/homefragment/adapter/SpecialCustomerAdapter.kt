@@ -10,25 +10,25 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.tarweej.mypost.R
 import com.tarweej.mypost.databinding.SpecialCustomerItemAdapterBinding
-import com.tarweej.mypost.databinding.SpecialFamousItemAdapterBinding
 import com.tarweej.mypost.databinding.TopProductItemAdapterBinding
-import com.tarweej.mypost.entites.home.SpecialFamouse
+import com.tarweej.mypost.entites.home.CustomerFamouse
+import com.tarweej.mypost.entites.home.Product
 import com.tarweej.mypost.mainactivity.MainActivity
 
 
-class SpecialFamousAdapter(var context: Context?) :
-    ListAdapter<SpecialFamouse, ViewHolder_SpecialFamouse>(DiffCallback_SpecialFamouse()) {
+class SpecialCustomerAdapter(var context: Context?) :
+    ListAdapter<CustomerFamouse, SpecialCustomerViewHolder>(DiffCallbackSpecialCustomer()) {
 
-    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder_SpecialFamouse {
-        val binding: SpecialFamousItemAdapterBinding = DataBindingUtil.inflate(
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): SpecialCustomerViewHolder {
+        val binding: SpecialCustomerItemAdapterBinding = DataBindingUtil.inflate(
             LayoutInflater.from(p0.context),
-            R.layout.special_famous_item_adapter, p0, false)
+            R.layout.special_customer_item_adapter, p0, false)
 
-        return ViewHolder_SpecialFamouse(binding)
+        return SpecialCustomerViewHolder(binding)
 
     }
 
-    override fun onBindViewHolder(holder: ViewHolder_SpecialFamouse, position: Int) {
+    override fun onBindViewHolder(holder: SpecialCustomerViewHolder, position: Int) {
         holder.bind(context, currentList[position])
 
 
@@ -36,29 +36,29 @@ class SpecialFamousAdapter(var context: Context?) :
 
 }
 
-private class DiffCallback_SpecialFamouse : DiffUtil.ItemCallback<SpecialFamouse>() {
+private class DiffCallbackSpecialCustomer : DiffUtil.ItemCallback<CustomerFamouse>() {
 
     override fun areItemsTheSame(
-        oldItem: SpecialFamouse, newItem: SpecialFamouse
+        oldItem: CustomerFamouse, newItem: CustomerFamouse
     ) =
         oldItem.id == newItem.id
 
     @SuppressLint("DiffUtilEquals")
     override fun areContentsTheSame(
-        oldItem: SpecialFamouse, newItem: SpecialFamouse
+        oldItem: CustomerFamouse, newItem: CustomerFamouse
     ) =
         oldItem == newItem
 }
 
 
-class ViewHolder_SpecialFamouse(
-    val binding: SpecialFamousItemAdapterBinding
+class SpecialCustomerViewHolder(
+    val binding: SpecialCustomerItemAdapterBinding
 ) : RecyclerView.ViewHolder(binding.root) {
 
 
-    fun bind(context: Context?, data: SpecialFamouse) {
+    fun bind(context: Context?, data: CustomerFamouse) {
 
-//        binding.listener = ClickHandler()
+    //    binding.listener = ClickHandler()
         binding.data = data
         binding.context = context as MainActivity?
     }

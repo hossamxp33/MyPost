@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import com.google.android.material.navigation.NavigationBarView
 import com.tarweej.mypost.R
 import com.tarweej.mypost.helper.ClickHandler
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
@@ -117,7 +118,8 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
 
     override fun onBackPressed() {
-        integerDeque.poll()
+
+        integerDeque.pop()
         if (!integerDeque.isNullOrEmpty()) {
             ClickHandler().switchFragment(
                 this,
@@ -125,7 +127,8 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             )
 
         } else
-            finish()
+
+            super.onBackPressed()
     }
 
     @Inject

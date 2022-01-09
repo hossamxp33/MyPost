@@ -1,23 +1,23 @@
 package com.tarweej.mypost.di
 
 import androidx.lifecycle.ViewModel
+import com.tarweej.mypost.helper.ViewModelKey
+import com.tarweej.mypost.presentation.homefragment.mvi.MainViewModel
 
 
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
 
-/**
-Created by Prokash Sarkar on Tue, January 19, 2021
- **/
+
 
 @Module
 interface MainModule {
-//
-//    @Binds
-//    @IntoMap
-//    @ViewModelKey(HomeViewModel::class)
-//    fun bindMainViewModel(mainViewModel: HomeViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(MainViewModel::class)
+    fun bindMainViewModel(mainViewModel: MainViewModel): ViewModel
 
 
 

@@ -6,6 +6,14 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 
     >
 <data>
+    <variable
+        name="context"
+        type="com.tarweej.mypost.mainactivity.MainActivity" />
+
+    <variable
+        name="data"
+        type="com.tarweej.mypost.entites.home.CustomerFamouse" />
+
 
 </data>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,7 +59,7 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="@string/textView"
+        android:text="@{data.username}"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/card_product_image" />

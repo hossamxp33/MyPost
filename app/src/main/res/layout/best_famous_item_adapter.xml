@@ -6,6 +6,14 @@
 
     >
     <data>
+        <variable
+            name="context"
+            type="com.tarweej.mypost.mainactivity.MainActivity" />
+
+        <variable
+            name="data"
+            type="com.tarweej.mypost.entites.home.BestFamouse" />
+
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,23 +25,12 @@
         android:animateLayoutChanges="true"
         >
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/card_product_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/product_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="4dp"
-                android:scaleType="fitXY"
+        <de.hdodenhof.circleimageview.CircleImageView                android:id="@+id/product_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                 android:padding="4dp"
                 android:src="@drawable/test_img"
                 android:background="@drawable/ringring_bg"
                 app:shapeAppearance="@android:color/white"
@@ -41,10 +38,10 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                app:strokeWidth="3dp" />
+
+                />
 
 
-        </androidx.cardview.widget.CardView>
 
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -59,8 +56,7 @@
             android:src="@drawable/star_ic"
             android:translationZ="3dp"
             app:layout_constraintBottom_toTopOf="@+id/product_name"
-            app:layout_constraintEnd_toEndOf="parent"
-
+            app:layout_constraintRight_toRightOf="parent"
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             app:strokeWidth="3dp" />
 
@@ -70,10 +66,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/textView"
+            android:text="@{data.first_name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_product_image" />
+            app:layout_constraintTop_toBottomOf="@+id/product_image" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

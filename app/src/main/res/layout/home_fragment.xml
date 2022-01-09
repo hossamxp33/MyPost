@@ -48,13 +48,12 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="180dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
                     android:layout_marginRight="16dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    app:layout_constraintHeight_percent="0.15"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/title"
@@ -68,7 +67,7 @@
                     android:layout_marginTop="8dp"
                     android:paddingBottom="5dp"
                     app:centered="true"
-                    app:fillColor="@color/hint_gray"
+                    app:fillColor="@color/purple_300"
                     app:layout_constraintTop_toBottomOf="@+id/pager"
                     app:pageColor="@color/gray"
                     app:selectedColor="#009688"
@@ -105,9 +104,9 @@
                     android:id="@+id/topProducts_recycleView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="8dp"
                     android:minHeight="140dp"
                     android:orientation="horizontal"
                     tools:listitem="@layout/top_product_item_adapter"
@@ -141,21 +140,20 @@
                     app:layout_constraintTop_toBottomOf="@id/topProducts_recycleView" />
 
 
-
-                            <androidx.recyclerview.widget.RecyclerView
-                                android:id="@+id/bestFamous_recycleView"
-                                android:layout_width="0dp"
-                                android:layout_height="wrap_content"
-                                android:minHeight="80dp"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginTop="8dp"
-                                android:layout_marginRight="16dp"
-                                android:orientation="horizontal"
-                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                                tools:listitem="@layout/best_famous_item_adapter"
-                                app:layout_constraintLeft_toLeftOf="parent"
-                                app:layout_constraintRight_toRightOf="parent"
-                                app:layout_constraintTop_toBottomOf="@id/bestFamous" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/bestFamous_recycleView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:minHeight="80dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/bestFamous"
+                    tools:listitem="@layout/best_famous_item_adapter" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -182,22 +180,20 @@
                     app:layout_constraintTop_toBottomOf="@id/bestFamous_recycleView" />
 
 
-
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/specialFamous_recycleView"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:minHeight="80dp"
-
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="8dp"
+                    android:minHeight="80dp"
                     android:orientation="horizontal"
-                    tools:listitem="@layout/special_famous_item_adapter"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/specialFamous" />
+                    app:layout_constraintTop_toBottomOf="@id/specialFamous"
+                    tools:listitem="@layout/special_famous_item_adapter" />
 
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -231,9 +227,9 @@
                     android:layout_height="wrap_content"
                     android:minHeight="80dp"
 
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="8dp"
                     android:orientation="horizontal"
                     tools:listitem="@layout/certified_famous_item_adapter"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
@@ -274,10 +270,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:minHeight="80dp"
-
-                    android:layout_marginLeft="16dp"
+                    android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginRight="16dp"
+                    android:layout_marginRight="8dp"
                     android:orientation="horizontal"
                     tools:listitem="@layout/special_customer_item_adapter"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"

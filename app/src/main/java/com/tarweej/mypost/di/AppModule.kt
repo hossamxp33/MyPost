@@ -2,7 +2,10 @@ package com.tarweej.mypost.di
 
 
 
+import android.content.Context
 import com.tarweej.mypost.datalayer.APIServices
+import com.tarweej.mypost.repo.homepage.DataSource
+import com.tarweej.mypost.repo.homepage.RemoteDataSource
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
@@ -11,16 +14,15 @@ import javax.inject.Singleton
 class AppModule() {
 
 
-//    @Singleton
-//    @Provides
-//    fun provideTasksRemoteDataSource(apiService: APIServices): DataSource {
-//        return RemoteDataSource(apiService)
-//    }
+    @Singleton
+    @Provides
+    fun provideTasksRemoteDataSource(apiService: APIServices): DataSource {
+        return RemoteDataSource(apiService)
+    }
+
+
+
 //
-
-
-
-
 //    @Provides
 //    fun providePreferenceHelper(context: Context): PreferenceHelper {
 //        return PreferenceHelper(context)

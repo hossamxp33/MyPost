@@ -6,6 +6,14 @@
 
     >
     <data>
+        <variable
+            name="context"
+            type="com.tarweej.mypost.mainactivity.MainActivity" />
+
+        <variable
+            name="data"
+            type="com.tarweej.mypost.entites.home.SpecialFamouse" />
+
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,22 +26,18 @@
         >
 
 
-        <com.google.android.material.imageview.ShapeableImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/product_image"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:padding="8dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/top_product_tes"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:padding="4dp"
+            android:src="@drawable/test_img"
             android:background="@drawable/ringring_bg"
             app:shapeAppearance="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-
-            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-
-            app:strokeWidth="3dp" />
+            />
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/star"
@@ -44,7 +48,7 @@
             app:shapeAppearance="@android:color/white"
             android:padding="1dp"
             android:scaleType="fitXY"
-            android:src="@drawable/energy_ic"
+            android:src="@drawable/fire_ic"
             android:translationZ="3dp"
             app:layout_constraintBottom_toTopOf="@+id/product_name"
             app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:text="@string/textView"
+            android:text="@{data.first_name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/product_image" />

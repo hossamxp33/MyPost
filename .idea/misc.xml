@@ -9,12 +9,16 @@
         <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/button_pressed.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/ic_launcher_foreground.xml" value="0.178125" />
         <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/light_gray_back_g.xml" value="0.16574074074074074" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/round_gray_back_g.xml" value="0.321875" />
         <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/search_button.xml" value="0.15555555555555556" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable-xxhdpi/white_round_backg.xml" value="0.24444444444444444" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/bottom_nav_item_color.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_disabled.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_enabled.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_focused.xml" value="0.2064814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_pressed.xml" value="0.15555555555555556" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable/circle_bk.xml" value="0.24444444444444444" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable/corner_radius_bg.xml" value="0.19375" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/ic_arrow_back.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/light_gray_back_g.xml" value="0.16574074074074074" />
@@ -24,6 +28,7 @@
         <entry key="..\:/MyPost/app/src/main/res/drawable/search_bar_bg.xml" value="0.2064814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/search_button.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/view_profile_button.xml" value="0.2064814814814815" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable/white_round_backg.xml" value="0.24444444444444444" />
         <entry key="..\:/MyPost/app/src/main/res/font/normal.xml" value="0.1824074074074074" />
         <entry key="..\:/MyPost/app/src/main/res/layout-v28/home_fragment.xml" value="0.16197916666666667" />
         <entry key="..\:/MyPost/app/src/main/res/layout/activity_main.xml" value="0.18" />
@@ -35,8 +40,8 @@
         <entry key="..\:/MyPost/app/src/main/res/layout/certified_famous_item_adapter.xml" value="0.5" />
         <entry key="..\:/MyPost/app/src/main/res/layout/dropdown_item.xml" value="0.153125" />
         <entry key="..\:/MyPost/app/src/main/res/layout/famous_item_adapter.xml" value="0.2212962962962963" />
-        <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_adapter.xml" value="0.25" />
-        <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_fragment.xml" value="0.2212962962962963" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_adapter.xml" value="0.12" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/famous_profile_fragment.xml" value="0.33" />
         <entry key="..\:/MyPost/app/src/main/res/layout/fragment_my_orders.xml" value="0.2564814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/layout/home_fragment.xml" value="0.25" />
         <entry key="..\:/MyPost/app/src/main/res/layout/main_frame_content.xml" value="0.28425925925925927" />
@@ -49,12 +54,14 @@
         <entry key="..\:/MyPost/app/src/main/res/layout/request_fragment.xml" value="0.18" />
         <entry key="..\:/MyPost/app/src/main/res/layout/search_fragment.xml" value="0.25" />
         <entry key="..\:/MyPost/app/src/main/res/layout/special_customer_item_adapter.xml" value="0.287962962962963" />
-        <entry key="..\:/MyPost/app/src/main/res/layout/special_famous_item_adapter.xml" value="0.75" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/special_famous_item_adapter.xml" value="0.22" />
         <entry key="..\:/MyPost/app/src/main/res/layout/tob_bar.xml" value="0.16197916666666667" />
         <entry key="..\:/MyPost/app/src/main/res/layout/top_bar.xml" value="0.16" />
         <entry key="..\:/MyPost/app/src/main/res/layout/top_product_item_adapter.xml" value="0.22" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/viewpagerslide_home1.xml" value="0.17760416666666667" />
         <entry key="..\:/MyPost/app/src/main/res/menu/bottom_menu.xml" value="0.16" />
         <entry key="..\:/MyPost/app/src/main/res/menu/popup_menu.xml" value="0.16197916666666667" />
+        <entry key="..\:/MyPost/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2814814814814815" />
         <entry key="..\:/modon/app/src/main/res/drawable/button_enabled.xml" value="0.15555555555555556" />
         <entry key="..\:/modon/app/src/main/res/drawable/button_focused.xml" value="0.15555555555555556" />
       </map>
