@@ -9,6 +9,7 @@ import com.tarweej.mypost.helper.FragmentFactoryModule
 import com.tarweej.mypost.helper.ViewModelBuilderModule
 import com.tarweej.mypost.presentation.famousprofilefragment.FamousProfileFragment
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
+import com.tarweej.mypost.presentation.myorders.MyOrdersFragment
 import com.tarweej.mypost.presentation.notification.NotificationFragment
 import com.tarweej.mypost.presentation.profile.ProfileFragment
 import com.tarweej.mypost.presentation.request.FinishRequestFragment
@@ -70,6 +71,9 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(app: SearchFragment)
     fun inject(app: NotificationFragment)
     fun inject(app: FamousProfileFragment)
+    fun inject(app: MyOrdersFragment)
+
+
 }
 
 

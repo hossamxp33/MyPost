@@ -18,6 +18,7 @@
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_focused.xml" value="0.2064814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/button_pressed.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/circle_bk.xml" value="0.24444444444444444" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable/circle_layout.xml" value="0.20277777777777778" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/corner_radius_bg.xml" value="0.19375" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/ic_arrow_back.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/ic_launcher_background.xml" value="0.15555555555555556" />
@@ -27,6 +28,7 @@
         <entry key="..\:/MyPost/app/src/main/res/drawable/purpple_light_back_g.xml" value="0.15555555555555556" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/search_bar_bg.xml" value="0.2064814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/search_button.xml" value="0.15555555555555556" />
+        <entry key="..\:/MyPost/app/src/main/res/drawable/shimmer_rectangel_layout.xml" value="0.20277777777777778" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/view_profile_button.xml" value="0.2064814814814815" />
         <entry key="..\:/MyPost/app/src/main/res/drawable/white_round_backg.xml" value="0.24444444444444444" />
         <entry key="..\:/MyPost/app/src/main/res/font/normal.xml" value="0.1824074074074074" />
@@ -53,6 +55,9 @@
         <entry key="..\:/MyPost/app/src/main/res/layout/request_done_fragment.xml" value="0.18" />
         <entry key="..\:/MyPost/app/src/main/res/layout/request_fragment.xml" value="0.18" />
         <entry key="..\:/MyPost/app/src/main/res/layout/search_fragment.xml" value="0.25" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/shimmer_rectangle_item.xml" value="0.20092592592592592" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/shimmer_round_item.xml" value="0.20092592592592592" />
+        <entry key="..\:/MyPost/app/src/main/res/layout/shimmer_viewpager.xml" value="0.20092592592592592" />
         <entry key="..\:/MyPost/app/src/main/res/layout/special_customer_item_adapter.xml" value="0.287962962962963" />
         <entry key="..\:/MyPost/app/src/main/res/layout/special_famous_item_adapter.xml" value="0.22" />
         <entry key="..\:/MyPost/app/src/main/res/layout/tob_bar.xml" value="0.16197916666666667" />

@@ -2,8 +2,12 @@ package com.tarweej.mypost.mainactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
+import androidx.fragment.app.FragmentManager
 import com.google.android.material.navigation.NavigationBarView
 import com.tarweej.mypost.R
 import com.tarweej.mypost.helper.ClickHandler
@@ -21,10 +25,12 @@ import javax.inject.Inject
 
 
 import com.tarweej.mypost.presentation.request.RequestActivity
+import com.tarweej.mypost.presentation.searchfragment.SearchFragment
 
 
 class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
+    var doubleBackToExitPressedOnce :Boolean = false
 
     @Inject
     lateinit var fragmentFactory: FragmentFactory
@@ -48,10 +54,8 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             supportFragmentManager.beginTransaction()
                 .setCustomAnimations(0, 0, 0, 0)
                 .replace(R.id.main_frame, HomeFragment())
-                .addToBackStack(null)
                 .commit()
-            bottom_nav_bar.selectedItemId = R.id.home
-
+                 bottom_nav_bar.selectedItemId = R.id.home
         }
 
         //      BottomNav().bottomMenu(this)
@@ -59,6 +63,16 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
 
         bottom_nav_bar.setOnNavigationItemSelectedListener {
+//            supportFragmentManager.addOnBackStackChangedListener {
+//                if (supportFragmentManager.backStackEntryCount == 0) {
+//                    if (fragmentManager.backStackEntryCount <= 0) {
+//                        //check your position based on selected fragment and set it accordingly.
+//                        bottom_nav_bar.menu.getItem(0).isChecked = true
+//                    }                }
+//                // Other magic
+//            }
+
+
             val id = it.itemId
             if (integerDeque.contains(id)) {
 
@@ -79,56 +93,55 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
                 when (it.itemId) {
                     R.id.home -> {
                         menu.getItem(0).isChecked = true
-                        ClickHandler().switchFragment(this@MainActivity, HomeFragment())
                     }
+
                     R.id.myOrder -> {
                         menu.getItem(1).isChecked = true
-                        ClickHandler().switchFragment(this@MainActivity, MyOrdersFragment())
                     }
                     R.id.main -> {
                         menu.getItem(2).isChecked = true
-
                     }
                     R.id.Request -> {
-
                         ClickHandler().switchToActivity(this@MainActivity,RequestActivity())
                     }
 
                     R.id.profile -> {
                         menu.getItem(4).isChecked = true
-                        fragment = ProfileFragment()
                     }
                     else ->
                 {
-                    menu.getItem(0).isChecked = true
-                    ClickHandler().switchFragment(this@MainActivity, HomeFragment())
+                    fragment = HomeFragment()
+                    bottom_nav_bar.selectedItemId = R.id.home
                 }
                 }
-
-
             }
-
-
             true
-
         }
-
-
     }
 
 
     override fun onBackPressed() {
-
-        integerDeque.pop()
+        super.onBackPressed()
+        integerDeque.poll()
         if (!integerDeque.isNullOrEmpty()) {
             ClickHandler().switchFragment(
                 this,
                 BottomNav().getFragment(this, integerDeque.peek()!!)
             )
 
-        } else
+        }
+        else if (!doubleBackToExitPressedOnce)
+            finish()
 
-            super.onBackPressed()
+        else if (fragmentManager.backStackEntryCount == 0){
+            bottom_nav_bar.selectedItemId = R.id.home
+            doubleBackToExitPressedOnce  = true
+        }
+
+
+
+//       Handler(Looper.getMainLooper()).postDelayed(Runnable {  }, 2000)
+
     }
 
     @Inject

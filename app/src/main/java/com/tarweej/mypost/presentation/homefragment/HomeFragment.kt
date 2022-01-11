@@ -22,6 +22,7 @@ import com.tarweej.mypost.presentation.homefragment.adapter.*
 import com.tarweej.mypost.presentation.homefragment.mvi.MainIntent
 import com.tarweej.mypost.presentation.homefragment.mvi.MainViewModel
 import com.tarweej.mypost.presentation.homefragment.mvi.UserError
+import kotlinx.android.synthetic.main.home_fragment.*
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
@@ -90,7 +91,9 @@ class HomeFragment @Inject constructor(
                         viewModel?.intents.send(MainIntent.ErrorDisplayed(it))
                     } else {
                         if (it.progress == true) {
-                            //   shimmer_view_container.startShimmerAnimation()
+                            shimmer_view_container.startShimmerAnimation()
+                            shimmer_product_view.startShimmerAnimation()
+                            shimmer_round_view.startShimmerAnimation()
                             viewModel.intents.send(MainIntent.Initialize(it))
                         } else {
                             //// topProductsRecycleViewData
@@ -116,7 +119,7 @@ class HomeFragment @Inject constructor(
                                 Permissions().init(itS?.size, context as MainActivity, view)
                             }
                             view.indicator.setViewPager(view.pager)
-                            //  stopLoadingShimmer()
+                             stopLoadingShimmer()
                         }
 
                     }
@@ -171,5 +174,16 @@ class HomeFragment @Inject constructor(
         }
     }
 
+    fun stopLoadingShimmer() {
+        shimmer_view_container?.visibility = View.GONE
+        shimmer_view_container?.stopShimmerAnimation()
 
+
+        shimmer_round_view.visibility = View.GONE
+        shimmer_round_view.stopShimmerAnimation()
+
+        shimmer_product_view.visibility = View.GONE
+        shimmer_round_view.stopShimmerAnimation()
+
+    }
 }
