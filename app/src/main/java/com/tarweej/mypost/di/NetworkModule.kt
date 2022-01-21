@@ -18,7 +18,6 @@ import com.tarweej.mypost.presentation.request.FirstRequestFragment
 import com.tarweej.mypost.presentation.request.SecondRequestFragment
 import com.tarweej.mypost.presentation.request.ThirdRequestFragment
 import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
-import com.tarweej.mypost.presentation.settingsfragment.SettingsFragment
 
 import dagger.BindsInstance
 import dagger.Component
@@ -75,7 +74,6 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(app: FamousProfileFragment)
     fun inject(app: MyOrdersFragment)
     fun inject(app: SingInFragment)
-    fun inject(app: SettingsFragment)
 
 
 

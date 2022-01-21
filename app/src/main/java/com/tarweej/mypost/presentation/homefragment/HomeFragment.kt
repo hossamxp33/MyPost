@@ -6,12 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentFactory
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.tarweej.mypost.R
 import com.tarweej.mypost.databinding.HomeFragmentBinding
 import com.tarweej.mypost.helper.BaseApplication
@@ -23,9 +21,8 @@ import com.tarweej.mypost.presentation.homefragment.mvi.MainIntent
 import com.tarweej.mypost.presentation.homefragment.mvi.MainViewModel
 import com.tarweej.mypost.presentation.homefragment.mvi.UserError
 import com.tarweej.mypost.presentation.request.RequestActivity
-import com.tarweej.mypost.presentation.settingsfragment.SettingsFragment
+import com.tarweej.mypost.presentation.settings_activity.SettingsActivity
 import kotlinx.android.synthetic.main.home_fragment.*
-import kotlinx.android.synthetic.main.top_bar.*
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
@@ -80,7 +77,7 @@ class HomeFragment @Inject constructor(
         } 
         
         view.include.settingIcon.setOnClickListener {
-            ClickHandler().switchFragment(requireContext(), SettingsFragment())
+            ClickHandler().switchToActivity(requireContext(), SettingsActivity())
         }
 
 

@@ -17,5 +17,4 @@ class RemoteDataSource @Inject constructor(private val ApiService: APIServices) 
         runCatching { ApiService.getFamousInfo(famous_id) }
             .getOrElse { throw it }
 
-
 }

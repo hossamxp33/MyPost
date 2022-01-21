@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
 
     >
+
     <data>
 
     </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        >
+        android:background="@color/white">
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -24,16 +26,150 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-
                 <androidx.appcompat.widget.AppCompatTextView
-                 style="@style/Widget.AppCompat.Button.Colored"
-                    android:id="@+id/logout_btn"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/settingTitle"
+                    style="@style/HomeTitles"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="logout"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen_8"
+                    android:text="@string/settings"
+                    android:drawableLeft="@drawable/ic_arrow_back"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"
+                    app:layout_constraintTop_toBottomOf="@+id/settingTitle" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settingTitle">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/account_title"
+                        style="@style/HomeTitles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="@dimen/dimen_16"
+                        android:text="@string/acc"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/user_image"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/account_title" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/blackText"
+                        android:id="@+id/appCompatTextView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/name"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView4"
+                        app:layout_constraintTop_toTopOf="@+id/appCompatImageView4" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/blackText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/personal_info"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView4"
+                        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/constraintLayout6">
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/setting_title"
+                        style="@style/HomeTitles"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:padding="@dimen/dimen_16"
+                        android:text="@string/settings"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/language_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/lang_ic"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/setting_title" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        style="@style/grayText"
+
+                        android:id="@+id/language_chosen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/personal_info"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/setting_title" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        style="@style/blackText"
+
+                        android:id="@+id/language_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/personal_info"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/language_icon"
+                        app:layout_constraintTop_toBottomOf="@+id/setting_title" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+<androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/logout_btn"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="logout"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.core.widget.NestedScrollView>

@@ -57,6 +57,15 @@ class PreferenceHelper(private val context: Context) {
             edit.apply()
         }
 
+    var photo : String?
+        get() = app_prefs!!.getString("photo", "")
+        set(photo) {
+            val edit = app_prefs!!.edit()
+
+            edit.putString("phptp", photo)
+            edit.apply()
+        }
+
     var userAddress : String?
     get() = app_prefs!!.getString("userAddress","Address")
     set(userAddress) {

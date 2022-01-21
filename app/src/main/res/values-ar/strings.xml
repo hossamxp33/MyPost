@@ -57,7 +57,11 @@
     <string name="email_or_phone">الايميل او رقم الهاتف</string>
     <string name="forget_passowrd">نسيت كلمة السر</string>
     <string name="create_acc">أنشئ حساب</string>
+    <string name="acc">حسابي</string>
+
     <string name="new_here">جديد هنا؟\u0020  </string>
+    <string name="personal_info">Personal Info</string>
+    <string name="settings">Settings</string>
 
 
 </resources>
