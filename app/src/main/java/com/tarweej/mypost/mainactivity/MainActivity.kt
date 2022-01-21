@@ -2,18 +2,12 @@ package com.tarweej.mypost.mainactivity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.widget.Toast
+import android.view.WindowManager
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
-import androidx.fragment.app.FragmentManager
-import com.google.android.material.navigation.NavigationBarView
 import com.tarweej.mypost.R
 import com.tarweej.mypost.helper.ClickHandler
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
-import com.tarweej.mypost.presentation.myorders.MyOrdersFragment
-import com.tarweej.mypost.presentation.profile.ProfileFragment
 import dagger.android.AndroidInjection
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
@@ -25,7 +19,9 @@ import javax.inject.Inject
 
 
 import com.tarweej.mypost.presentation.request.RequestActivity
-import com.tarweej.mypost.presentation.searchfragment.SearchFragment
+import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
+import kotlinx.android.synthetic.main.top_bar.*
+import kotlinx.android.synthetic.main.top_bar.view.*
 
 
 class MainActivity : AppCompatActivity(), HasAndroidInjector {
@@ -49,6 +45,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
         setContentView(R.layout.activity_main)
 
+        this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE or WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
         if (savedInstanceState == null) {
             supportFragmentManager.beginTransaction()
@@ -59,7 +56,6 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
         }
 
         //      BottomNav().bottomMenu(this)
-
 
 
         bottom_nav_bar.setOnNavigationItemSelectedListener {
@@ -130,7 +126,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             )
 
         }
-        else if (!doubleBackToExitPressedOnce)
+        else if (doubleBackToExitPressedOnce)
             finish()
 
         else if (fragmentManager.backStackEntryCount == 0){

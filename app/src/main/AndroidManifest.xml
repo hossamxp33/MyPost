@@ -7,22 +7,26 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:installLocation="preferExternal"
+
         android:name=".helper.BaseApplication"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:windowSoftInputMode="stateVisible"
         android:usesCleartextTraffic="true"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyPost.NoActionBar">
         <activity
             android:name="com.tarweej.mypost.mainactivity.MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name="com.tarweej.mypost.presentation.request.RequestActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name="com.tarweej.mypost.presentation.auth.AuthenticationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

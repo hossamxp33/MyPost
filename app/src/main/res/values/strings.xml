@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">My Post</string>
     <string name="main">Home</string>
+    <string name="name">Name</string>
+
+
     <string name="favourite">Favourite</string>
     <string name="more">More</string>
     <string name="offers">Offers</string>
@@ -20,6 +23,8 @@
     <string name="textView" translatable="false">Text View</string>
 
     <string name="seeAll">See All</string>
+    <string name="ads">Ads</string>
+    <string name="rate">Rating</string>
 
 
     <string name="notification">Notification</string>
@@ -32,6 +37,15 @@
 
     <string name="title">Title</string>
     <string name="enterTitle">Enter Title</string>
+    <string name="enterName">Enter your name</string>
+    <string name="email"> Email</string>
+    <string name="EnterEmail">Enter your Email</string>
+    <string name="phone"> Phone number</string>
+    <string name="enterPhone"> Enter Phone number</string>
+    <string name="ID"> ID</string>
+    <string name="enteID"> Enter your ID </string>
+
+
     <string name="sub_title"> Subtitle</string>
     <string name="enter_sub_title">Enter Subtitle</string>
     <string name="description">Description</string>
@@ -48,6 +62,15 @@
     <string name="search_famous">Search famous social media</string>
     <string name="ads_with_famous">Advertising with famous social media</string>
     <string name="viewProfile">View Profile</string>
+    <string name="sign_in">Sign In \u0020 </string>
+    <string name="sign_up">Sign up \u0020 </string>
+    <string name="email_or_phone">Email or phone number</string>
+    <string name="password">password</string>
+    <string name="forget_passowrd">Forget password</string>
+    <string name="create_acc"> create account</string>
+    <string name="new_here"> New here ?\u0020 </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

@@ -1,12 +1,13 @@
 package com.tarweej.mypost.di
 
-import android.app.Notification
 import android.content.Context
 import com.tarweej.mypost.ActivityBuildersModule
 import com.tarweej.mypost.datalayer.APIServices
 import com.tarweej.mypost.helper.Constants.Companion.BASE_URL
 import com.tarweej.mypost.helper.FragmentFactoryModule
+import com.tarweej.mypost.helper.PreferenceHelper
 import com.tarweej.mypost.helper.ViewModelBuilderModule
+import com.tarweej.mypost.presentation.auth.sign_in_fragment.SingInFragment
 import com.tarweej.mypost.presentation.famousprofilefragment.FamousProfileFragment
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
 import com.tarweej.mypost.presentation.myorders.MyOrdersFragment
@@ -16,7 +17,8 @@ import com.tarweej.mypost.presentation.request.FinishRequestFragment
 import com.tarweej.mypost.presentation.request.FirstRequestFragment
 import com.tarweej.mypost.presentation.request.SecondRequestFragment
 import com.tarweej.mypost.presentation.request.ThirdRequestFragment
-import com.tarweej.mypost.presentation.searchfragment.SearchFragment
+import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
+import com.tarweej.mypost.presentation.settingsfragment.SettingsFragment
 
 import dagger.BindsInstance
 import dagger.Component
@@ -68,10 +70,13 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(app: SecondRequestFragment)
     fun inject(app: ThirdRequestFragment)
     fun inject(app: FinishRequestFragment)
-    fun inject(app: SearchFragment)
+    fun inject(app: FamousFragment)
     fun inject(app: NotificationFragment)
     fun inject(app: FamousProfileFragment)
     fun inject(app: MyOrdersFragment)
+    fun inject(app: SingInFragment)
+    fun inject(app: SettingsFragment)
+
 
 
 }
@@ -88,11 +93,11 @@ class APIModule constructor() {
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
             .addInterceptor { chain: Interceptor.Chain ->
                 val originalRequest = chain.request()
-            //     var Pref = PreferenceHelper(context)
+                val Pref = PreferenceHelper(context)
                 val builder = originalRequest.newBuilder()
              //   builder.addHeader("Accept", "application/json")
-             //   builder.addHeader("Content-Type", "application/json")
-               builder.addHeader("Authorization", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImV4cCI6MTY0NjQ4MDY1MX0.UreCRAhFIZL7enQRKBRwYAhdkTPGHvVWWctA6LyaJSI")
+                builder.addHeader("Content-Type", "application/json")
+            //    builder.addHeader("Authorization", "Bearer " + Pref.token)
 //                Log.d("token",Pref.token!!)
                 val newRequest = builder.build()
                 chain.proceed(newRequest)

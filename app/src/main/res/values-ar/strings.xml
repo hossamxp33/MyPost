@@ -1,11 +1,20 @@
 <resources>
     <string name="app_name">My Post</string>
+    <string name="name">الاسم</string>
+
     <string name="main">الرئيسية</string>
     <string name="favourite">المفضلة</string>
     <string name="more">المزيد</string>
     <string name="offers">العروض</string>
     <string name="enjoy"> أستمتع \u0020</string>
     <string name="cart">العربة</string>
+    <string name="enterName">اكتب الاسم</string>
+    <string name="email">الايميل</string>
+    <string name="EnterEmail">أدخل الايميل</string>
+    <string name="phone">الموبايل</string>
+    <string name="enterPhone"> أدخل رقم الموبايل</string>
+    <string name="ID">بطاقة تعريف</string>
+    <string name="enteID">أدخل بطاقة تعريف </string>
     <string name="myorder">طلبي</string>
     <string name="request">طلب</string>
     <string name="profile">ملف شخصي</string>
@@ -17,7 +26,6 @@
     <string name="certifiedFamous">مشاهير معتمدة</string>
     <string name="specialCustomer">عملاء مميزون</string>
     <string name="send">ارسال طلب</string>
-
     <string name="confirm">تأكيد</string>
     <string name="cancel">الغاء</string>
     <string name="notification">الاشعارات</string>
@@ -38,8 +46,18 @@
     <string name="backToHome">الرجوع الي الرئيسية</string>
     <string name="requestMade">تم اجراء الطلب\u0020 </string>
     <string name="please_wait">من فضلك انتظر حتى يقبل المشهور طلبك</string>
-    <string name="search_famous">Search famous social media</string>
-    <string name="ads_with_famous">Advertising with famous social media</string>
-    <string name="viewProfile">View Profile</string>
+    <string name="search_famous">ابحث عن مشاهير التواصل الاجتماعي </string>
+    <string name="ads_with_famous">الإعلان باستخدام وسائل التواصل الاجتماعي الشهيرة</string>
+    <string name="viewProfile">الملف الشخصي</string>
+    <string name="ads">اعلانات</string>
+    <string name="rate">تقييم</string>
+    <string name="sign_in">تسجيل الدخول\u0020 </string>
+    <string name="sign_up">انشاء حساب </string>
+    <string name="password">كلمة المرور</string>
+    <string name="email_or_phone">الايميل او رقم الهاتف</string>
+    <string name="forget_passowrd">نسيت كلمة السر</string>
+    <string name="create_acc">أنشئ حساب</string>
+    <string name="new_here">جديد هنا؟\u0020  </string>
+
 
 </resources>

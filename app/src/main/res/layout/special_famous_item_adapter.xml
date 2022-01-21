@@ -52,7 +52,6 @@
             android:translationZ="3dp"
             app:layout_constraintBottom_toTopOf="@+id/product_name"
             app:layout_constraintEnd_toEndOf="parent"
-
             app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
             app:strokeWidth="3dp" />
 

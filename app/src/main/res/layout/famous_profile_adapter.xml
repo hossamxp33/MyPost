@@ -10,9 +10,9 @@
             name="context"
             type="com.tarweej.mypost.presentation.request.RequestActivity" />
 
-        <!--        <variable-->
-        <!--            name="data"-->
-        <!--            type="com.tarweej.mypost.entities.cities.CitiesModel" />-->
+                <variable
+                    name="data"
+                    type="com.tarweej.mypost.entites.famousinfo.FamousInfo" />
 
 
         <variable
@@ -21,8 +21,7 @@
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
-        android:layout_margin="@dimen/dimen_16"
-
+        android:layout_margin="@dimen/dimen_8"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,33 +40,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.cardview.widget.CardView
-                android:id="@+id/card_product_image"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
 
-
-                <com.google.android.material.imageview.ShapeableImageView
-                    android:id="@+id/product_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/card_product_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
                     android:background="@drawable/ringring_bg"
                     android:padding="4dp"
-                    android:scaleType="fitXY"
                     android:src="@drawable/test_img"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:shapeAppearance="@android:color/white"
-                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-                    app:strokeWidth="3dp" />
+                  />
 
 
-            </androidx.cardview.widget.CardView>
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/star"
@@ -79,32 +65,33 @@
                 android:scaleType="fitXY"
                 android:src="@drawable/star_ic"
                 android:translationZ="3dp"
-                app:layout_constraintBottom_toTopOf="@+id/product_name"
+                app:layout_constraintBottom_toTopOf="@+id/famous_name"
                 app:layout_constraintEnd_toEndOf="@+id/card_product_image"
                 app:shapeAppearance="@android:color/white"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
                 app:strokeWidth="3dp" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/product_name"
+                android:id="@+id/famous_name"
                 style="@style/blackText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="@string/textView"
+                android:text="@{data.first_name}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/card_product_image" />
+
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/ads_num_text"
                 style="@style/grayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/textView"
+                android:layout_marginTop="16dp"
+                android:text="@string/ads"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+                app:layout_constraintTop_toBottomOf="@+id/famous_name" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/ads_num"
@@ -112,7 +99,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="@string/textView"
+                android:text="150"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/ads_num_text" />
 
@@ -121,11 +108,13 @@
                 android:layout_width="1dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
+                android:background="@color/gray"
                 app:layout_constraintBottom_toBottomOf="@+id/ads_num"
                 app:layout_constraintEnd_toStartOf="@id/rating_num_text"
                 app:layout_constraintStart_toEndOf="@+id/ads_num_text"
-                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+                app:layout_constraintTop_toBottomOf="@+id/famous_name" />
 
 
             <androidx.appcompat.widget.AppCompatTextView
@@ -133,10 +122,10 @@
                 style="@style/grayText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="@string/textView"
+                android:layout_marginTop="16dp"
+                android:text="@string/rate"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+                app:layout_constraintTop_toBottomOf="@+id/famous_name" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/star_ic"
@@ -167,7 +156,7 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/search_button"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="16dp"
@@ -175,8 +164,8 @@
                 android:text="@string/viewProfile"
                 android:textColor="@color/purple_300"
                 android:textSize="14sp"
-                android:onClick="@{() -> listener.famousProfileFragment(context)}"
 
+                android:onClick="@{() -> listener.openItemDetailsFragment(context,data.famous_id)}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

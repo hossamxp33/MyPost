@@ -22,7 +22,10 @@ import com.tarweej.mypost.presentation.homefragment.adapter.*
 import com.tarweej.mypost.presentation.homefragment.mvi.MainIntent
 import com.tarweej.mypost.presentation.homefragment.mvi.MainViewModel
 import com.tarweej.mypost.presentation.homefragment.mvi.UserError
+import com.tarweej.mypost.presentation.request.RequestActivity
+import com.tarweej.mypost.presentation.settingsfragment.SettingsFragment
 import kotlinx.android.synthetic.main.home_fragment.*
+import kotlinx.android.synthetic.main.top_bar.*
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
@@ -69,6 +72,17 @@ class HomeFragment @Inject constructor(
         specialFamousRecycleView()
         certifiedFamousRecycleView()
         specialCustomerRecycleView()
+
+
+
+       view.include.search.setOnClickListener {
+            ClickHandler().switchToActivity(requireContext(), RequestActivity())
+        } 
+        
+        view.include.settingIcon.setOnClickListener {
+            ClickHandler().switchFragment(requireContext(), SettingsFragment())
+        }
+
 
         return view.root
     }

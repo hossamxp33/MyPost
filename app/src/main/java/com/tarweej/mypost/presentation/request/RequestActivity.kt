@@ -3,6 +3,7 @@ package com.tarweej.mypost.presentation.request
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.tarweej.mypost.R
+import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
 
 class RequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,7 +16,7 @@ class RequestActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction()
             .setCustomAnimations(0, 0, 0, 0)
-            .replace(R.id.requestFrame, FirstRequestFragment())
+            .replace(R.id.requestFrame, FamousFragment())
             .commit()
 
 

@@ -11,8 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:animateLayoutChanges="true"
-        >
+        android:animateLayoutChanges="true">
 
         <include
             android:id="@+id/include"
@@ -109,8 +108,8 @@
                     android:layout_marginEnd="8dp"
                     android:minHeight="200dp"
                     android:orientation="horizontal"
-                    tools:listitem="@layout/top_product_item_adapter"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="@layout/top_product_item_adapter"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/topProducts" />
