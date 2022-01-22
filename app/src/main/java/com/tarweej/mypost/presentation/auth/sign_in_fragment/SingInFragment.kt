@@ -41,6 +41,7 @@ class SingInFragment @Inject constructor() : Fragment() {
 
     private lateinit var auth: FirebaseAuth
     @Inject
+
     lateinit var Pref: PreferenceHelper
     override fun onCreate(savedInstanceState: Bundle?) {
 

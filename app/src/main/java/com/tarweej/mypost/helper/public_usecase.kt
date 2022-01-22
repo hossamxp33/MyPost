@@ -17,6 +17,7 @@ import com.bumptech.glide.request.RequestOptions
 
 import com.google.android.material.imageview.ShapeableImageView
 import com.tarweej.mypost.R
+import de.hdodenhof.circleimageview.CircleImageView
 import www.sanju.motiontoast.MotionToast
 import www.sanju.motiontoast.MotionToastStyle
 import java.lang.Long
@@ -64,8 +65,17 @@ fun Error_MotionToast(massage: String, context: Activity) {
 fun setImageResource(imageView: AppCompatImageView, resource: String?) {
     val requestOptions = RequestOptions()
     requestOptions.error(R.drawable.noimg)
+    Glide.with(imageView.context)
+        .load((resource))
+        .transition(DrawableTransitionOptions.withCrossFade())
+        .apply(requestOptions)
+        .into(imageView)
+}
 
-
+@BindingAdapter("android:src")
+fun setCircleImageResource(imageView: CircleImageView, resource: String?) {
+    val requestOptions = RequestOptions()
+    requestOptions.error(R.drawable.noimg)
     Glide.with(imageView.context)
         .load((resource))
         .transition(DrawableTransitionOptions.withCrossFade())

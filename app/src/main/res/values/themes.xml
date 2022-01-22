@@ -57,6 +57,12 @@
 
     </style>
 
+        <style name="redText">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/red2</item>
+
+    </style>
+
     //// circle shape
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">50%</item>

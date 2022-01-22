@@ -72,6 +72,10 @@
     <string name="new_here"> New here ?\u0020 </string>
     <string name="personal_info">Personal Info</string>
     <string name="settings">Settings</string>
+    <string name="language">Language</string>
+    <string name="location">Location</string>
+    <string name="support">Support</string>
+    <string name="sign_out">Sign out</string>
     <!-- TODO: Remove or change this placeholder text -->
 
 

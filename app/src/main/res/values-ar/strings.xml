@@ -60,8 +60,12 @@
     <string name="acc">حسابي</string>
 
     <string name="new_here">جديد هنا؟\u0020  </string>
-    <string name="personal_info">Personal Info</string>
-    <string name="settings">Settings</string>
+    <string name="personal_info">بيانات شخصية</string>
+    <string name="settings">اعدادات</string>
+    <string name="language">اللغة</string>
+    <string name="location">الموقع</string>
+    <string name="support">Support</string>
+    <string name="sign_out">Sign out</string>
 
 
 </resources>

@@ -11,7 +11,6 @@ class PreferenceHelper(private val context: Context) {
 
         private var app_prefs: SharedPreferences? = null
         private  val app_ref = "userdetails"
-        private  val IsActive = "IsActive"
 
     var cartResuturantId: Int
             get() = app_prefs!!.getInt("cartResuturantId", 0)
@@ -52,17 +51,15 @@ class PreferenceHelper(private val context: Context) {
         get() = app_prefs!!.getString("userName", "Alaa")
         set(userName) {
             val edit = app_prefs!!.edit()
-
             edit.putString("userName", userName)
             edit.apply()
         }
 
     var photo : String?
-        get() = app_prefs!!.getString("photo", "")
+        get() = app_prefs!!.getString("photo", "photo")
         set(photo) {
             val edit = app_prefs!!.edit()
-
-            edit.putString("phptp", photo)
+            edit.putString("photo", photo)
             edit.apply()
         }
 

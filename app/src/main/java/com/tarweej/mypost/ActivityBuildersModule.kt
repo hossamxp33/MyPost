@@ -4,6 +4,8 @@ import com.example.dagger.di.scopes.ActivityScope
 import com.tarweej.mypost.di.MainModule
 import com.tarweej.mypost.helper.FragmentFactoryModule
 import com.tarweej.mypost.mainactivity.MainActivity
+import com.tarweej.mypost.presentation.auth.AuthenticationActivity
+import com.tarweej.mypost.presentation.settings_activity.SettingsActivity
 
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
@@ -18,6 +20,14 @@ interface ActivityBuildersModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
     fun contributeMainActivity(): MainActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
+    fun contributeAuthenticationActivity(): AuthenticationActivity
+
+    @ActivityScope
+    @ContributesAndroidInjector(modules = [MainModule::class, FragmentFactoryModule::class])
+    fun contributeSettingsActivity(): SettingsActivity
 
 
 

@@ -33,23 +33,29 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.common.SignInButton
 import com.google.android.gms.tasks.Task
 import com.tarweej.mypost.helper.PreferenceHelper
+import dagger.android.AndroidInjection
+import dagger.android.AndroidInjector
+import dagger.android.DispatchingAndroidInjector
+import dagger.android.HasAndroidInjector
 
 
-class AuthenticationActivity : AppCompatActivity() {
+class AuthenticationActivity : AppCompatActivity() , HasAndroidInjector {
 
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     val RC_SIGN_IN = 1000
 
     @Inject
     lateinit var Pref: PreferenceHelper
+
+
     private companion object LoginActivity {
         private const val TAG = "LoginActivity"
         private const val RC_GOOGLE_SIGN_IN = 4926
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AndroidInjection.inject(this)
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_auth)
 
         this.window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE or WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
@@ -104,6 +110,7 @@ class AuthenticationActivity : AppCompatActivity() {
                 val personEmail = acct.email
                 val personId = acct.id
                 val personPhoto: Uri? = acct.photoUrl
+
                 Pref.photo = personPhoto.toString()
 
                 Toast.makeText(this, "user name is : $personGivenName",Toast.LENGTH_SHORT).show()
@@ -124,6 +131,11 @@ class AuthenticationActivity : AppCompatActivity() {
     }
 
 
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    override fun androidInjector(): AndroidInjector<Any> {
+        return androidInjector
+    }
 
 
 }
