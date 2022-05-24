@@ -113,6 +113,8 @@ class AuthenticationActivity : AppCompatActivity() , HasAndroidInjector {
 
                 Pref.photo = personPhoto.toString()
 
+          //      Pref.UserId = personId!!.toInt()
+
                 Toast.makeText(this, "user name is : $personGivenName",Toast.LENGTH_SHORT).show()
             }
 

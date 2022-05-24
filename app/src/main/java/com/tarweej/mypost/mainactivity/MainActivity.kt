@@ -20,6 +20,8 @@ import javax.inject.Inject
 
 import com.tarweej.mypost.presentation.request.RequestActivity
 import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
+import com.tarweej.mypost.presentation.settings_activity.SettingsActivity
+import kotlinx.android.synthetic.main.activity_main_content.*
 import kotlinx.android.synthetic.main.top_bar.*
 import kotlinx.android.synthetic.main.top_bar.view.*
 
@@ -57,17 +59,16 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
 
         //      BottomNav().bottomMenu(this)
 
+       include.search.setOnClickListener {
+            ClickHandler().switchToActivity(this, RequestActivity())
+        }
+
+       include.setting_icon.setOnClickListener {
+            ClickHandler().switchToActivity(this, SettingsActivity())
+        }
+
 
         bottom_nav_bar.setOnNavigationItemSelectedListener {
-//            supportFragmentManager.addOnBackStackChangedListener {
-//                if (supportFragmentManager.backStackEntryCount == 0) {
-//                    if (fragmentManager.backStackEntryCount <= 0) {
-//                        //check your position based on selected fragment and set it accordingly.
-//                        bottom_nav_bar.menu.getItem(0).isChecked = true
-//                    }                }
-//                // Other magic
-//            }
-
 
             val id = it.itemId
             if (integerDeque.contains(id)) {
@@ -87,7 +88,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             ClickHandler().switchFragment(this, BottomNav().getFragment(this, it.itemId))
             with(bottom_nav_bar) {
                 when (it.itemId) {
-                    R.id.home -> {
+                    R.id.homefragment -> {
                         menu.getItem(0).isChecked = true
                     }
 
@@ -130,7 +131,7 @@ class MainActivity : AppCompatActivity(), HasAndroidInjector {
             finish()
 
         else if (fragmentManager.backStackEntryCount == 0){
-            bottom_nav_bar.selectedItemId = R.id.home
+            bottom_nav_bar.selectedItemId = R.id.homefragment
             doubleBackToExitPressedOnce  = true
         }
 

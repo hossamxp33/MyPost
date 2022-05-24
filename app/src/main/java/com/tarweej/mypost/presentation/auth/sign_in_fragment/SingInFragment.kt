@@ -40,8 +40,8 @@ class SingInFragment @Inject constructor() : Fragment() {
     private val viewModel by viewModels<AuthViewModel> { viewModelFactory }
 
     private lateinit var auth: FirebaseAuth
-    @Inject
 
+    @Inject
     lateinit var Pref: PreferenceHelper
     override fun onCreate(savedInstanceState: Bundle?) {
 

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.tarweej.mypost.presentation.famous.auth.FamousAuthenticationActivity" />
+
+        <variable
+            name="data"
+            type="com.tarweej.mypost.entites.famousinfo.FamousInfo" />
+
+
+        <variable
+            name="listener"
+            type="com.tarweej.mypost.helper.ClickHandler" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_700"
+
+
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/social_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/top_corner_radius_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatImageView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:minHeight="300dp"
+                android:layout_margin="@dimen/dimen_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView3"
+                    style="@style/HomeTitles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/welcomeFollower"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView5"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/youCanfollow"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView3" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView6"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/youCanfind"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView5" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/code"
+                    style="@style/HomeTitles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="1234"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatTextView6" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/find"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/appCompatTextView6" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/wait"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/waiting"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/code" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/link"
+                    style="@style/blackText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/app_name"
+                    app:layout_constraintStart_toEndOf="@+id/appCompatImageView6"
+                    app:layout_constraintTop_toBottomOf="@+id/wait" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/wait_ic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/waiting_ic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/wait" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/share"
+                    style="@style/HomeTitles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/share"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/link" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/skipped"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="@{() -> listener.switchToPostLinksFragment(context)}"
+                    android:text="@string/skip"
+                    android:textSize="@dimen/dimen_16"
+                    android:textColor="@color/gray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/share" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/appCompatImageView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/share_ic"
+                    app:layout_constraintEnd_toStartOf="@+id/share"
+                    app:layout_constraintTop_toTopOf="@+id/share" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

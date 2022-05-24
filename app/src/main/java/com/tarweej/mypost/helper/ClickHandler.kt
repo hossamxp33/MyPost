@@ -9,6 +9,9 @@ import androidx.fragment.app.Fragment
 import com.tarweej.mypost.R
 import com.tarweej.mypost.entites.famousinfo.FamousInfo
 import com.tarweej.mypost.mainactivity.MainActivity
+import com.tarweej.mypost.presentation.famous.auth.FamousAuthenticationActivity
+import com.tarweej.mypost.presentation.famous.post_links_fragment.PostLinksFragment
+import com.tarweej.mypost.presentation.famous.social.FamousSocialFragment
 import com.tarweej.mypost.presentation.famousprofilefragment.FamousProfileFragment
 import com.tarweej.mypost.presentation.notification.NotificationFragment
 import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
@@ -25,6 +28,17 @@ fun famousProfileFragment (context: Context){
     fun switchToSecondRequestFragment(context: Context) {
         switchToRequestFragment(context as RequestActivity, SecondRequestFragment())
     }
+    fun switchToPostLinksFragment(context: Context) {
+        (context as FamousAuthenticationActivity).supportFragmentManager.beginTransaction()
+            .setCustomAnimations(0, 0, 0, 0)
+            .replace(R.id.auth_frame, PostLinksFragment()).addToBackStack(null).commit()    }
+    fun switchToFamousSocialFragment(context: Context) {
+        (context as FamousAuthenticationActivity).supportFragmentManager.beginTransaction()
+            .setCustomAnimations(0, 0, 0, 0)
+            .replace(R.id.auth_frame, FamousSocialFragment()).addToBackStack(null).commit()    }
+
+
+
     fun switchToFirstRequestFragment(context: Context) {
         switchToRequestFragment(context as RequestActivity, FirstRequestFragment())
     }
@@ -38,7 +52,7 @@ fun famousProfileFragment (context: Context){
     }
 
     fun switchSearchFragment(context: Context) {
-        switchFragment(context, FamousFragment())
+        switchToRequestFragment(context, FamousFragment())
     }
 
     fun switchNotificationFragment(context: Context) {

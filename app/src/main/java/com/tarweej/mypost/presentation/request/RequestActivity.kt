@@ -16,7 +16,7 @@ class RequestActivity : AppCompatActivity() {
 
         supportFragmentManager.beginTransaction()
             .setCustomAnimations(0, 0, 0, 0)
-            .replace(R.id.requestFrame, FamousFragment())
+            .replace(R.id.requestFrame, FirstRequestFragment())
             .commit()
 
 

@@ -8,6 +8,10 @@ import com.tarweej.mypost.helper.FragmentFactoryModule
 import com.tarweej.mypost.helper.PreferenceHelper
 import com.tarweej.mypost.helper.ViewModelBuilderModule
 import com.tarweej.mypost.presentation.auth.sign_in_fragment.SingInFragment
+import com.tarweej.mypost.presentation.auth.sign_up_fragment.SingUpFragment
+import com.tarweej.mypost.presentation.famous.auth.FamousSingUpFragment
+import com.tarweej.mypost.presentation.famous.post_links_fragment.PostLinksFragment
+import com.tarweej.mypost.presentation.famous.social.FamousSocialFragment
 import com.tarweej.mypost.presentation.famousprofilefragment.FamousProfileFragment
 import com.tarweej.mypost.presentation.homefragment.HomeFragment
 import com.tarweej.mypost.presentation.myorders.MyOrdersFragment
@@ -18,6 +22,8 @@ import com.tarweej.mypost.presentation.request.FirstRequestFragment
 import com.tarweej.mypost.presentation.request.SecondRequestFragment
 import com.tarweej.mypost.presentation.request.ThirdRequestFragment
 import com.tarweej.mypost.presentation.famous_fragment.FamousFragment
+import com.tarweej.mypost.presentation.myorders.AcceptedOrdersFragment
+import com.tarweej.mypost.presentation.myorders.AllOrdersFragment
 
 import dagger.BindsInstance
 import dagger.Component
@@ -41,7 +47,8 @@ import javax.inject.Singleton
 @Singleton
 @Component(
     modules =
-    [   DispatcherModule::class,
+    [
+        DispatcherModule::class,
         AndroidInjectionModule::class,
         APIModule::class,
         AppModule::class,
@@ -53,7 +60,6 @@ import javax.inject.Singleton
 
     ]
 )
-
 
 
 interface AppComponent : AndroidInjector<DaggerApplication> {
@@ -74,7 +80,12 @@ interface AppComponent : AndroidInjector<DaggerApplication> {
     fun inject(app: FamousProfileFragment)
     fun inject(app: MyOrdersFragment)
     fun inject(app: SingInFragment)
-
+    fun inject(app: SingUpFragment)
+    fun inject(app: AllOrdersFragment)
+    fun inject(app: AcceptedOrdersFragment)
+    fun inject(app: FamousSocialFragment)
+    fun inject(app: FamousSingUpFragment)
+    fun inject(app: PostLinksFragment)
 
 
 }
@@ -93,9 +104,9 @@ class APIModule constructor() {
                 val originalRequest = chain.request()
                 val Pref = PreferenceHelper(context)
                 val builder = originalRequest.newBuilder()
-             //   builder.addHeader("Accept", "application/json")
+                //   builder.addHeader("Accept", "application/json")
                 builder.addHeader("Content-Type", "application/json")
-            //    builder.addHeader("Authorization", "Bearer " + Pref.token)
+                //    builder.addHeader("Authorization", "Bearer " + Pref.token)
 //                Log.d("token",Pref.token!!)
                 val newRequest = builder.build()
                 chain.proceed(newRequest)
@@ -112,7 +123,7 @@ class APIModule constructor() {
     @Provides
     fun provideRetrofit(
         okHttpClient: OkHttpClient,
-        gsonConverterFactory: GsonConverterFactory
+        gsonConverterFactory: GsonConverterFactory,
     ): Retrofit {
         return Retrofit.Builder()
             .baseUrl(BASE_URL)

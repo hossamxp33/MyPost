@@ -109,16 +109,30 @@
                     app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/search_button"
+                    android:id="@+id/publicRequest_button"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/search_button"
+                    android:onClick="@{() -> listener.switchToFinishRequestFragment(context)}"
+                    android:text="@string/sendPublicRequest"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/privateRequest_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintWidth_percent="0.8" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/privateRequest_button"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:background="@drawable/search_button"
-                    android:text="@string/send"
+                    android:onClick="@{() -> listener.switchSearchFragment(context)}"
+                    android:text="@string/sendPrivateRequest"
                     android:textColor="@color/white"
                     android:textSize="18sp"
-                    android:onClick="@{() -> listener.switchToFinishRequestFragment(context)}"
-
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -21,6 +21,10 @@
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|enterAlways|enterAlwaysCollapsed">
 
+            <include
+                android:id="@+id/include"
+                layout="@layout/top_bar" />
+
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
 

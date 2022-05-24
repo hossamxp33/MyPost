@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    >
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                style="@style/HomeTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/soicalMedia"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/HomeTitles"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/postLinks"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@+id/view3"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/enterLink"
+                style="@style/grayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/enterLinks"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/facebook"
+                android:textColor="@color/facebook"
+                style="@style/grayText"
+                app:layout_constraintBottom_toBottomOf="@+id/linkFacebook"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linkFacebook" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/linkFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/link"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/enterLink" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/facebookBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen_16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkFacebook">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/appCompatEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="@string/enterLink"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/purple_300"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/appCompatTextView2"
+                    style="@style/purpleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/dismiss"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/dismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/dismiss_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/appCompatEditText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/facebookBox" />
+
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/instaBox" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/twitter"
+                style="@style/grayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/twitter"
+                android:textColor="@color/twitter"
+                app:layout_constraintBottom_toBottomOf="@+id/linkTwitter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linkTwitter" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/linkTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/link"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/twitterBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkTwitter">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/twitterEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:background="@drawable/light_gray_back_g"
+                    android:hint="@string/enterLink"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/purple_300"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/twitterTextView"
+                    style="@style/purpleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/twitterDismiss"
+                    app:layout_constraintTop_toBottomOf="@+id/twitterEditText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/twitterDismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/dismiss_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/twitterEditText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/twitterBox" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/insta"
+                style="@style/grayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/insta"
+                android:textColor="@color/insta"
+                app:layout_constraintBottom_toBottomOf="@+id/linkInsta"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linkInsta" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/linkInsta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/link"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/instaBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkInsta">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/instaEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:hint="@string/enterLink"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/purple_300"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/instaTextView"
+                    style="@style/purpleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/instaDismiss"
+                    app:layout_constraintTop_toBottomOf="@+id/instaEditText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/instaDismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/dismiss_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/instaEditText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/linkSnap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/link"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view5" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/snap"
+                style="@style/grayText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="@string/snap"
+                android:textColor="@color/snap"
+                app:layout_constraintBottom_toBottomOf="@+id/linkSnap"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/linkSnap" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/snapBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkSnap">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/snapEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/light_gray_back_g"
+                    android:paddingStart="@dimen/dimen_8"
+                    android:hint="@string/enterLink"
+                    android:textColorHint="@color/gray"
+                    app:hintTextColor="@color/purple_300"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/snapTextView"
+                    style="@style/purpleTextStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/submit"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/snapDismiss"
+                    app:layout_constraintTop_toBottomOf="@+id/snapEditText" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/snapDismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:src="@drawable/dismiss_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/snapEditText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <View
+                android:id="@+id/view6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/gray"
+                app:layout_constraintTop_toBottomOf="@+id/snapBox" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/signIn_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_button"
+                android:text="@string/create_acc"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/view6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_percent="0.8" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

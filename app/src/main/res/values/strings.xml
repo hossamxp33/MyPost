@@ -76,6 +76,34 @@
     <string name="location">Location</string>
     <string name="support">Support</string>
     <string name="sign_out">Sign out</string>
+    <string name="city">City</string>
+    <string name="country">Country</string>
+    <string name="addBio">Add a bio to your profile</string>
+    <string name="accepted">Accepted orders</string>
+    <string name="date">Date</string>
+    <string name="famous">Famous</string>
+    <string name="sendPublicRequest">Send public request</string>
+    <string name="sendPrivateRequest">Send private request</string>
+    <string name="welcomeFollower">welcome my followers 😍</string>
+
+    <string name="youCanfollow">you can follow me or order my service from My Post App</string>
+    <string name="youCanfind">you can find me by my code</string>
+    <string name="waiting">i am waiting you here</string>
+    <string name="share">Share</string>
+    <string name="skip">Skip</string>
+    <string name="iBan" >iBan</string>
+    <string name="loginAsFamous" >Login As a Famous</string>
+    <string name="loginAsMerchant" >Login As a Merchant</string>
+    <string name="postLinks">Post Links</string>
+    <string name="enterLinks">Please enter your post links at your account</string>
+    <string name="enterLink"> Enter  link</string>
+    <string name="submit">Submit</string>
+    <string name="soicalMedia">Social Media</string>
+    <string name="facebook" >Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="insta">Instgram</string>
+    <string name="snap">SnapChat</string>
+
     <!-- TODO: Remove or change this placeholder text -->
 
 

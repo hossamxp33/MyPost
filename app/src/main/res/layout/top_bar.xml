@@ -54,11 +54,11 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/location_name"
+                android:id="@+id/fragment_name"
                 style="@style/HomeTitles"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/main"
+                android:text=""
                 android:textFontWeight="600"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -80,12 +80,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            app:layout_constraintTop_toBottomOf="@+id/top_bar"
-            android:background="@color/gray"
-           />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

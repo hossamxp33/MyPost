@@ -45,15 +45,25 @@
         <item name="android:textColor">@color/gray</item>
 
     </style>
+
     <style name="signUpText">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/gray</item>
         <item name="android:padding">12dp</item>
+        <item name="hintTextColor">@color/gray</item>
 
     </style>
+
+
         <style name="blackText">
         <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="greenText">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">@color/teal_200</item>
 
     </style>
 

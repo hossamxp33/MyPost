@@ -60,8 +60,8 @@ class HomeFragment @Inject constructor(
             R.layout.home_fragment, container, false
         )
 
-        view.include.context = context as MainActivity
-        view.include.listener = ClickHandler()
+//        view.context = context as MainActivity
+//        view.listener = ClickHandler()
 
         getAllData()
         topProductsRecycleView()
@@ -71,14 +71,6 @@ class HomeFragment @Inject constructor(
         specialCustomerRecycleView()
 
 
-
-       view.include.search.setOnClickListener {
-            ClickHandler().switchToActivity(requireContext(), RequestActivity())
-        } 
-        
-        view.include.settingIcon.setOnClickListener {
-            ClickHandler().switchToActivity(requireContext(), SettingsActivity())
-        }
 
 
         return view.root

@@ -15,7 +15,7 @@
     <string name="enterPhone"> أدخل رقم الموبايل</string>
     <string name="ID">بطاقة تعريف</string>
     <string name="enteID">أدخل بطاقة تعريف </string>
-    <string name="myorder">طلبي</string>
+    <string name="myorder">طلباتي</string>
     <string name="request">طلب</string>
     <string name="profile">ملف شخصي</string>
     <string name="interactiveAds">إعلانات تفاعلية</string>
@@ -64,8 +64,35 @@
     <string name="settings">اعدادات</string>
     <string name="language">اللغة</string>
     <string name="location">الموقع</string>
-    <string name="support">Support</string>
-    <string name="sign_out">Sign out</string>
+    <string name="support">دعم</string>
+    <string name="sign_out">تسجيل خروج</string>
+    <string name="city">المدينة</string>
+    <string name="country">الدولة</string>
+    <string name="addBio">اضافة وصف ل ملفك الشخصي</string>
+    <string name="accepted">الطلبات المقبولة</string>
+    <string name="date">تاريخ</string>
+    <string name="famous">مشهور</string>
+    <string name="sendPublicRequest">إرسال طلب عام</string>
+    <string name="sendPrivateRequest">إرسال طلب خاص</string>
+    <string name="welcomeFollower">مرحبا متابعي 😍</string>
+    <string name="youCanfollow">يمكنك متابعتي أو طلب خدمتي من تطبيق My Post</string>
+    <string name="youCanfind">يمكنك أن تجدني من خلال الرمز الخاص بي</string>
+    <string name="waiting">انتظرك هنا</string>
+    <string name="share">مشاركة</string>
 
+    <string name="skip">تخطي</string>
+    <string name="iBan" />
+    <string name="loginAsFamous" >تسجيل الدخول ك مشهور</string>
+    <string name="loginAsMerchant" >تسجيل الدخول ك تاجر</string>
+    <string name="postLinks">Post Links</string>
+    <string name="enterLinks">Please enter your post links at your account</string>
+    <string name="enterLink"> enter  link</string>
+    <string name="submit">Submit</string>
+    <string name="soicalMedia">Social Media</string>
+    <string name="facebook" >Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="insta">Instgram</string>
+
+    <string name="snap">SnapChat</string>
 
 </resources>
